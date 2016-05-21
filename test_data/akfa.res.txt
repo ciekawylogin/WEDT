@@ -1,0 +1,39 @@
+{
+	address_blocks:
+	[
+		{
+			begin_line: 2,
+			end_line: 8,
+			data:
+			{
+				name: "PPHU "AKFA" ALEKSANDRA KUKULSKA",
+				address: "WARSZAWSKA 24, 97-350 GORZKOWICE",
+				NIP: "771-178-22-07",
+				account_no: "04 1020 3916 0000 0302 0242 1428",
+				email: "sklep@akfa.pl",
+				tel_fax: "/44/6818 990"
+			}
+		},
+		
+		{
+			begin_line: 10,
+			end_line: 14,
+			data:
+			{
+				name: "PPHU "AKFA" \nALEKSANDRA KUKULSKA",
+				address: "WARSZAWSKA 24, \n97-350 GORZKOWICE",
+				NIP: "771-178-22-07"
+			}
+		},
+		{
+			begin_line: 26,
+			end_line: 29,
+			data:
+			{
+				name: "GMINA LĘKI SZLACHECKIE",
+				address: "LĘKI SZLACHECKIE 13D \n97-352 LĘKI SZLACHECKIE",
+				NIP: "771-11-54-273"
+			}
+		}
+	[
+}
