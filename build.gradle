@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+group = 'wedt'
+mainClassName = 'wedt.tokenizer.Tokenizer'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.9'
+}
+
+// Allow passing command line arguments to the application (using -Prunargs).
+run {
+    if (project.hasProperty('runargs')) {
+        args(runargs.split(','))
+    }
+}
