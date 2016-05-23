@@ -1,0 +1,20 @@
+STREET_NAME = nazwa ulicy (na podstawie katalogu nazw ulic z TERYT-u / dodatkowych przesłanek jak wielka litera)
+CITY = nazwa miejscowości (na podstawie jw.)
+MUNICIPALITY = nazwa gminy (na podstawie jw. - do ustalenia kwestia odróżniania gmin od miejscowości o tych samych nazwach)
+MUNICIPALITY_INDICATOR = {"gmina", "gm."}
+VOIVODESHIP = nazwa województwa
+VOIVODESHIP_INDICATOR = {"woj.", "województwo"}
+COMPANY_TYPE = {"SA", "S.A.", "Sp. z o.o.", "Sp.j.", ...} (TODO: uzupełnić listę)
+STREET_INDICATOR = {"ul.", "ulica", "al.", "aleja", "aleje", "pl.", "plac"}
+ACCOUNT_NO = ciąg cyfr o długości 22, być może z myślnikami 
+NIP_INDICATOR = "NIP"
+NIP = ciąg cyfr o długości 10, być może z myślnikami 
+INTEGER = inny ciąg cyfr
+PERCENT = ciąg cyfr i znak "%"
+POSTAL_CODE = ciąg: dwie cyfry, myślnik, trzy cyfry
+DECIMAL = ciąg cyfr z jedną kropką albo przecinkiem w środku (liczba dziesiętna)
+NUMBER_SEQ = ciąg cyfr i znaków "/"
+COUNTRY_CODE = {"PL"} (inne raczej u nas nie wystąpią)
+CURRENCY = {"PLN", ...?}
+
+
