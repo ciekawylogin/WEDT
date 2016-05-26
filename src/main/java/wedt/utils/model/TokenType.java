@@ -27,5 +27,11 @@ public enum TokenType implements Serializable {
     NUMBER,
     DATE,
     FIRST_NAME,
-    LAST_NAME;
+    LAST_NAME,
+    SPRZEDAWCA,
+    STREET,
+    ACCOUNT,
+    COMPANY_CODE,
+    PHONE_INDICATOR,
+    EMAIL;
 }

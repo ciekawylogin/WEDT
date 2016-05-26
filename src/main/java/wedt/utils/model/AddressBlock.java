@@ -13,4 +13,8 @@ public class AddressBlock implements Serializable {
     public void addTokenLine(TokenLine tokenLine) {
         tokenLines.add(tokenLine);
     }
+
+    public String printValue() {
+        return tokenLines.toString();
+    }
 }

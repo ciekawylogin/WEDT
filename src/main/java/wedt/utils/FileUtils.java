@@ -1,14 +1,18 @@
 package wedt.utils;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.SerializationUtils;
 import wedt.utils.model.FileContent;
 import wedt.utils.model.TokenLine;
 import wedt.utils.model.TokenType;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -85,5 +89,34 @@ public class FileUtils {
         } else {
             return Optional.of(new FileContent(file.getName(), tokenLines));
         }
+    }
+
+    public final void saveSerializationToFile(Serializable toBeSaved, String fileName) {
+        File file = new File(fileName);
+        FileOutputStream fop = null;
+
+        try {
+            fop = new FileOutputStream(file);
+            SerializationUtils.serialize(toBeSaved, fop);
+            log.info("Saved to serialize file.");
+        } catch (IOException e) {
+            log.warn("Exception while serializating ", e);
+        }
+    }
+
+    public final Serializable readSerializationFromFile(String fileName) {
+        File file = new File(fileName);
+        FileInputStream fip;
+        Serializable serializable = null;
+
+        try {
+            fip = new FileInputStream(file);
+            serializable = SerializationUtils.deserialize(fip);
+            log.info("Read from serialize file.");
+        } catch (IOException e) {
+            log.warn("Exception while deserializating ", e);
+        }
+
+        return serializable;
     }
 }
