@@ -11,7 +11,13 @@ import java.util.Set;
 @Value
 public class TreeNode implements Serializable {
     private List<AddressBlock> addressBlocks;
+    /**
+     * elementy z odpowiedzią twierdzącą na postawioną hipotezę
+     */
     private TreeNode leftChild;
+    /**
+     * elementy z negatywną twierdzącą na postawioną hipotezę
+     */
     private TreeNode rightChild;
     private Set<TokenType> tokenTypeSplitValue;
     private Integer depth;

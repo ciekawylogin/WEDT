@@ -8,10 +8,13 @@ import wedt.utils.model.FileContent;
 import wedt.utils.model.TokenLine;
 import wedt.utils.model.TokenType;
 
+import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 import java.util.Set;
 
@@ -40,6 +43,7 @@ public class RandomForest {
 
         randomForest.learnFromDirectory("./test_data", "decisionTrees_serial");
         List<TreeNode> decisionTrees = randomForest.learnFromSerializeFile("decisionTrees_serial");
+        randomForest.getAddressesForFile("./test_data/agora.tokens.txt", decisionTrees);
     }
 
     public List<TreeNode> learnFromSerializeFile(String fileToBeSaved) {
@@ -72,7 +76,7 @@ public class RandomForest {
             decisionTrees.add(treeNode);
         }
         log.info("Generated number of decisionTrees=" + numberOfTreesToGenerate);
-        if(fileToBeSaved != null) {
+        if (fileToBeSaved != null) {
             fileUtils.saveSerializationToFile((Serializable) decisionTrees, fileToBeSaved);
         }
 
@@ -92,7 +96,7 @@ public class RandomForest {
         List<AddressBlock> result = new ArrayList<>();
         int size = addressBlocks.size();
 
-        for (AddressBlock addressBlock : addressBlocks) {
+        for (int i = 0; i < addressBlocks.size(); i++) {
             result.add(addressBlocks.get(random.nextInt(size)));
         }
 
@@ -111,15 +115,21 @@ public class RandomForest {
         return result;
     }
 
+    /**
+     * @param addressBlocks lista wszystkchh bloków adresowych w danym węźle
+     * @param tokenTypes    lista wszystkich dostepnych tokenów
+     * @param depthIndex    głębokość szukania na adresach w danym weźle
+     * @return
+     */
     private TreeNode buildSingleTreeNode(List<AddressBlock> addressBlocks,
-                                     List<TokenType> tokenTypes, int depthIndex) {
+                                         List<TokenType> tokenTypes, int depthIndex) {
         int maxLength = 0;
 
         for (AddressBlock addressBlock : addressBlocks) {
             maxLength = Math.max(maxLength, addressBlock.getTokenLines().size());
         }
 
-        if(maxLength - depthIndex <= 0) {
+        if (maxLength - depthIndex <= 0) {
             //liść
             return new TreeNode(addressBlocks);
         } else {
@@ -127,7 +137,7 @@ public class RandomForest {
             int tokenLinesDepthQuestion = random.nextInt(maxLength - depthIndex);
             //o jakie tokeny bedzie zadawane pytanie (alternatywa tokenów)
             Set<TokenType> tokenTypeQuestionSet = new HashSet<>();
-            int tokensAmountInQuestion = 1 + (int)( tokenLinesDepthQuestion * numberOfTokensInQuestion);
+            int tokensAmountInQuestion = 1 + (int) (tokenLinesDepthQuestion * numberOfTokensInQuestion);
             for (int i = 0; i < tokensAmountInQuestion; i++) {
                 tokenTypeQuestionSet.add(tokenTypes.get(random.nextInt(tokenTypes.size())));
             }
@@ -137,30 +147,114 @@ public class RandomForest {
             //zaczynając od pozycji depthIndex na liście tokenów
             List<AddressBlock> containsList = new ArrayList<>();
             List<AddressBlock> doesntContainList = new ArrayList<>();
-            boolean containsTmp;
 
             for (AddressBlock addressBlock : addressBlocks) {
-                containsTmp = false;
-                for(int i = depthIndex; i <= tokenLinesDepthQuestion && i < addressBlock.getTokenLines().size(); i++) {
-                    TokenLine tokenLine = addressBlock.getTokenLines().get(i);
-                    if(tokenTypeQuestionSet.contains(tokenLine.getTokenType())) {
-                        containsList.add(addressBlock);
-                        containsTmp = true;
-                        break;
-                    }
-                }
-                if(!containsTmp) {
+                if (checkIfTokensContainsAnyToken(addressBlock.getTokenLines(), depthIndex,
+                        tokenLinesDepthQuestion, tokenTypeQuestionSet)) {
+                    containsList.add(addressBlock);
+                } else {
                     doesntContainList.add(addressBlock);
                 }
             }
 
-            TreeNode leftTreeNode = buildSingleTreeNode(containsList, tokenTypes, depthIndex+1);
-            TreeNode rightTreeNode = buildSingleTreeNode(doesntContainList, tokenTypes, depthIndex+1);
+            TreeNode leftTreeNode = buildSingleTreeNode(containsList, tokenTypes, depthIndex + 1);
+            TreeNode rightTreeNode = buildSingleTreeNode(doesntContainList, tokenTypes, depthIndex + 1);
             return new TreeNode(addressBlocks,
                     leftTreeNode,
                     rightTreeNode,
                     tokenTypeQuestionSet,
                     tokenLinesDepthQuestion);
         }
+    }
+
+    /**
+     * Sprawdza czy lista tokenów zawiera jakikolwiek token z podanej listy
+     * na podanej głębokości.
+     *
+     * @return
+     */
+    private boolean checkIfTokensContainsAnyToken(List<TokenLine> tokenLines, int depthIndex,
+                                                  int tokenLinesDepthQuestion, Set<TokenType> tokenTypeQuestionSet) {
+        for (int i = depthIndex; i <= tokenLinesDepthQuestion && i < tokenLines.size(); i++) {
+            TokenLine tokenLine = tokenLines.get(i);
+            if (tokenTypeQuestionSet.contains(tokenLine.getTokenType())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Sprawdza czy adres zaczyna się w tym jednym konkretnym miejscu na liście linii tokenów.
+     *
+     * @return długość odnalezionego ciągu adresowego, lub 0 gdy nie znaleziono
+     */
+    public int checkIfAddressBegins(List<TokenLine> tokenLines, int depthIndex,
+                                    TreeNode decisionTree) {
+        if (decisionTree.isLeafTrue()) {
+            return depthIndex;
+        } else if (decisionTree.isLeafFalse()) {
+            return 0;
+        } else {
+            if (checkIfTokensContainsAnyToken(tokenLines, depthIndex,
+                    decisionTree.getDepth(), decisionTree.getTokenTypeSplitValue())) {
+                return checkIfAddressBegins(tokenLines, depthIndex + 1, decisionTree.getLeftChild());
+            } else {
+                return checkIfAddressBegins(tokenLines, depthIndex + 1, decisionTree.getRightChild());
+            }
+        }
+    }
+
+    /**
+     * Zwraca średnią długośc ciągu adresowego jako wynik, lub 0 gdy nei znaleziono.
+     */
+    public int checkIfAddressBegins(List<TokenLine> tokenLines, int depthIndex,
+                                    List<TreeNode> decisionTrees) {
+        int trueAnswer = 0;
+        int falseAnswer = 0;
+        int addressDepth = 0;
+
+        for (TreeNode decisionTree : decisionTrees) {
+            int addressFound = checkIfAddressBegins(tokenLines, depthIndex, decisionTree);
+            if (checkIfAddressBegins(tokenLines, depthIndex, decisionTree) > 0) {
+                trueAnswer++;
+                addressDepth += addressFound;
+            } else {
+                falseAnswer++;
+            }
+        }
+        return (trueAnswer > falseAnswer) ? (int) Math.floor(addressDepth / trueAnswer) : 0;
+    }
+
+    public List<AddressBlock> getAddressesFromTokenLines(List<TokenLine> tokenLines, List<TreeNode> decisionTrees) {
+        List<AddressBlock> addressBlocks = new LinkedList<>();
+
+        for (int i = 0; i < tokenLines.size(); i++) {
+            int addressDepth = checkIfAddressBegins(tokenLines, i, decisionTrees);
+            if (addressDepth > 0) {
+                int endIndex = Math.min(i + addressDepth, tokenLines.size());
+                addressBlocks.add(new AddressBlock(tokenLines.subList(i, endIndex)));
+            }
+        }
+        return addressBlocks;
+    }
+
+    public List<AddressBlock> getAddressesForFile(String fileName, List<TreeNode> decisionTrees) {
+        Optional<FileContent> fileContent = fileUtils.loadFile(new File(fileName));
+        List<AddressBlock> addressBlocks = new ArrayList<>();
+
+        if (fileContent.isPresent()) {
+            addressBlocks = getAddressesFromTokenLines(fileContent.get().getTokenLines(), decisionTrees);
+            log.info("Number of address blocks found for file " + fileName
+                    + " is " + addressBlocks.size());
+            StringBuilder stringBuilder = new StringBuilder();
+            for (AddressBlock addressBlock : addressBlocks) {
+                stringBuilder.append(addressBlock.printValue()).append("\n\n");
+            }
+            log.info(stringBuilder.toString());
+        } else {
+            log.warn("Unable to read file content from " + fileName);
+        }
+        return addressBlocks;
     }
 }
