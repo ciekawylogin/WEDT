@@ -1,0 +1,7 @@
+ul
+ulica
+al
+aleja
+aleje
+pl
+plac
