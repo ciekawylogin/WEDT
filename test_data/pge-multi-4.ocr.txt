@@ -1,0 +1,131 @@
+
+Punkt poboru energii:
+Taryfa:
+Kod PPE:
+Rozliczenie od dnia:
+Lp. - S Taryfa
+13 1 C11
+ŚWIETLICA WIEJSKA
+GRODOWICE, 28-512 GRODOWICE
+Wygodna
+PL ZEOD_2603000371_03
+201-5.01.01 Mocz umowy: 5,00 kW
+Od stanu Do stanu
+5645
+5837
+Nr fabryczny licznika: 30432489
+Do dnia Mnożna
+2015.02.12
+1
+Numer punktu: 028
+Numer dokumentu: 06/723311111
+Odczyt fizyczny
+Zabezpieczenie: 32 A
+Ilość Jm Cena VAT Należnośc
+192 kWh 0,2373
+Stawka VAT Netto
+23%
+45.56
+VAT Brutto
+23%
+45,56
+10,48
+56.04
+Razem punkt
+45,56
+10,48 56,04
+Punkt poboru energii: REMIZA STRAŻACKA
+KRÓLEWICE, 28-512 KRÓLE WICE
+Numer punktu: 029
+Numer dokumentu: 06/7239/012
+Taryfa:
+Kod PPE:
+Rozliczenie od dnia:
+Lp. - S Taryfa
+Wygodna
+PL ZEOD_2603000372_05
+201-5.01.01
+Od stanu Do stanu
+Nr fabryczny licznika: 15020766
+Moc z umowy: 15,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie: 32 A
+Ilość Jm Cena VAT Należność
+14 1 C11
+19980 23470 2015.02.12
+1
+3490 kWh 0,2373 23% 828,18
+Stawka VAT Netto
+VAT Brutto
+23% 828,18 190,48 1018.66
+Razem punkt 828,18 190,48 1018,66 s
+Punkt poboru energii: ŚWIETLICA WIEJSKA
+SĘDZISZOWICE, 28-512 SĘDZISZOWICE
+Numer punktu: 032
+Numer dokumentu: 06/7241/064
+Taryfa: Wygodna Nr fabryczny licznika: 13232578
+Kod PPE: PL ZEOD 2603000373 07
+Rozliczenie od dnia: 201-5.01.01- Moc z umowy: 15,00 kW
+Lp. - S Taryfa Od stanu Do stanu
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie:
+Ilość Jm Cena
+32 A
+VAT Należność
+15 1 C11 52257 53633 2015.02.12 1
+1376 kWh 0.2373 23% 326,52
+Stawka VAT Netto
+VAT Brutto
+23% 326.52
+75,10 401.62
+Razem punkt
+326,52
+75,10 401,62
+Punkt poboru energii: OCHOT.STRAż POŻARNA
+SĘDZISZOWICE, 28-512 SĘDZISZOWICE
+Numer punktu: 033
+Numer dokumentu: 06/7243/030
+Taryfa: Wygodna
+Kod PPE: PL_ZEOD_2603000374_09
+Rozliczenie od dnia: 2015.01.01
+Nr fabryczny licznika: 15355710
+Mocz umowy: 12,00 kW
+Lp. - S Taryfa Od stanu Do stanu Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie:
+Ilość Jm Cena
+25 A
+VAT
+•
+Należność
+16 1 C11 12996 16132 2015.02.12 1
+3136 kWh 0,2373 23% 744,17
+Stawka VAT Netto
+VAT Brutto
+23% 744,17 171,16 915,33
+Razem punkt
+744,17
+171,16 915,33
+Punkt poboru energii: OSP
+CZYŻOWICE 51, 28-512 CZYżOWICE
+Numer punktu: 034
+Numer dokumentu: 06/7247/020
+Taryfa: Wygodna
+Kod PPE: PL_ZE013_2603000375_01
+Rozliczenie od dnia: 2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika: 71910689
+Moc z urnowy: 9,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie: 20 A
+Ilość Jm Cena VAT Należność
+17 1 C11 267 267 2015.02.11 1
+0 kWh 0,2373 23%
+0,00
+FAKTURA VAT Nr: 06 0172 000 0563 06
+Numer strony: 4
+POE Obrót Spółka Akcylna ul. 8-go Marca 6. 35-959 Rzeszów skr. poczt. 63. Sąd Repnowy w Rzeszowie XII Wydział Gospodarczy KRS 0000030499, NIP: 813 02 68 082. Kapitał
+zakładowy: 492 640 400 złotych w całości opłacony http:mwww.pge-obroipl

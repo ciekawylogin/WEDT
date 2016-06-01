@@ -1,0 +1,48 @@
+Data wystawienia: 2015-05-12
+Data dokonania lub zakończenia dostawy towarów lub wykonania usługi: 2015-05-12
+FAKTURA VAT Nr : ZETO/001/3630/2015 (361/05)
+SPRZEDAWCA:
+ZAKŁAD ELEKTRONICZNEJ TECHNIKI OBLICZENIOWEJ SPÓŁKA Z O.O.
+75-708 KOSZALIN
+ul: 4 MARCA 38
+tel : 94 34 73 821
+NIP : 669-22-08-121
+BANK : BANK ZACHODNI WBK S.A. 2 ODDZIAŁ W KOSZALINIE
+KONTO : 46 1090 1711 0000 0000 7002 3162
+(
+69
+q-6Lo
+Ur Id Miejski w DzIwnowie
+Kancelari3 001113
+Wrł.
+
+20. MAJ. 2015
+Hos 14cvmko,
+Podpis ..... .
+NABYWCA: GMINA DZIWNÓW
+NIP : 986-015-69-76
+Indeks : K 658
+za okres od: 2015-05-01 do: 2015-05-31
+Termin zapłaty do : 2015-05-26
+Lp Nazwa usługi lub towaru
+72-420 DZIWNÓW
+ul. SZOSOWA 5
+Sposób zapłaty : PRZELEW 14 DNI
+Kod Symbol Jednostka miary Cena Wartość V A T Wartość
+PKW i U ilość nazwa jednostkowa bez podatku stawka kwota z podatkiem
+SERWIS SYSTEMU DODATKI 744 1,00 ryczałt 64,00 64,00 23%
+MIESZKANIOWE
+Nr UMOWY : 7099
+RAZEM: 64,00
+64,00 23%
+14,72
+78,72
+14,72
+78,72
+14,72
+78,72
+wartość do zapłaty 78,72
+Słownie : siedemdziesiąt osiem złotych siedemdziesiąt dwa grosze
+Wystawił : Maria Rutkowska
+AGAIWprzypadku niedotrzymania terminu zapłaty zostaną naliczone odsetkiustawowe.
+Na przelewie proszę podać Nr indeksu K *****

@@ -1,0 +1,153 @@
+
+
+PE: PL_ZEOD _2603000366 04
+iczenie od dnia: 2015.01.01
+p. - S Taryfa Od stanu Do stanu
+8 1 C11 3330 3330
+Mocz umowy: 15.00 kW
+Do dnia Mnozna
+2015.02.04
+Punkt poboru energii: SWIETLICA WIEJSKA
+USCISZOWICE. 28-512 PIOTRKOWICE
+Zabezpieczenie: 32 A
+Ilosć Jm Cena VAT Należnośc
+0 kWh 0,2373 23% 0,00
+Stawka VAT Netto
+VAT Brutto
+23%
+0.00
+0,00
+00
+Razem punkt
+0,00
+0,00
+Numer punktu: 023
+Numer dokumentu 06.6394.045
+0,00
+Taryfa: Wygodna
+Kod PPE: PL ZEOD 2603000367_06
+Rozliczenie od dnia: 2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika. 5739742
+Moc z umowy:
+Do dnia
+15.00 kW
+Mnozna
+Odczyt fizyczny
+Zabezpieczenie: 32 A
+Ilość Jm Cena VAT Nalezność
+9 1 C11 21344 21591
+2015 02 12
+247 kWh 0,2373 23% 58,61
+Stawka VAT Netto
+VAT Brutto
+23%
+58,61
+13.48
+72.09
+Razem punkt
+58.61
+13,48
+72,09
+()Punkt poboru energii WIEJSKI DOM
+MORAWIANKI. 28-512 MORAWIANKI
+Numer punktu. 025
+Numer dokumentu: 06 6408'050
+Taryfa:
+Kod PPE:
+Rozliczenie od dnia
+Wygodna
+PL ZEOD_2603000368_08
+2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika 13107869
+Moc z umowy:
+Do dnia
+15,00 kW
+Mnożna
+Odczyt fizyczny
+Zabezpieczenie. 32 A
+Ilosc Jm Cena VAT Należnosc
+10 1 C11 124: 1245
+2015 02 12
+1
+5 kWh 0,2373 23%
+Stawka VAT Netto
+1.19
+VAT Brutto
+23%
+1,19
+0,27
+1.46
+Razem punkt
+1,19
+0,27
+1,46
+Punkt poboru energii: SWIETLICA WIEJSKA
+MORAWIANKI. 28-512 MORAWIANK1
+Numer punktu: 026
+Numer dokumentu: 06 6408 051
+Taryla. Wygodna
+Koc PPE: PL_ZE0D_2603000369_00
+Rozliczenie oc Crier 2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licz- 13383112
+Moc z umowy-.
+Do dnia
+15.00 kW
+Mnozna
+Odczyt fizyczny
+Zabezpieczenie. 32 A
+llosc Jm Cena VAT Naleznosc
+1 C • €23- 5239
+2015 02 12
+2 - .7., 23-3
+Stawka VAT Netto
+VAT
+0,47
+Brutto
+23'
+0,47
+011
+0.58
+Razem punkt
+0,47
+0,11
+0,58
+Punkt poboru ener: SWIETLICA WIEJSKA
+KACZKOW10E. 28-512 KACZKOWICE
+Numer punktu. 027
+Numer dokumentu: 066410071
+Taryfa:
+Kod PPE:
+Rozliczenie od oma
+Wygodna
+PL 2E00_2603000370_01
+2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny Itcznika 15132944
+Moc Z LUTIOWT
+Do dnia
+15.00 kW
+Mnozna
+Odczyt fizyczny
+Zabezpieczenie 32 A
+Ilosc Jm Cena VAT Naleznosc
+12 1 C11 1687 7793
+2015.02.11
+106 kWh 0.2373 23%
+Stawka VAT Netto
+25,15
+VAT Brutto
+23%
+25,15
+5,78
+30.93
+Razem punkt
+25,15
+5,78
+30,93
+MKTURA VAT Nr: 06 0172 000 0563 06
+Numer strony: 3
+POE Obrót SpOlks Akcyjna ul. 8-go Marca 6.35-959 Rzeszow skr poczt 63. Sąd Repom'', w Rzeszom° XII Wycd.ał Gospodarczy KAS 0000030499. NIP 813 02 68 oaz. Kama'
+zaKmciowy 492 640 400 ziotych w calomo opmco,y http:. wiww.ppe-obrot.pl

@@ -1,0 +1,145 @@
+Data sprzedaży: 2015-05-05
+Faktura VAT
+4; Data wystawienia: 2015-05-05
+Nr: FVS 00119/05/15
+Sprzedawca
+Nazwa: Zakład Wodociągów i Kanalizacji spółka zoo.
+Adres: Mickiewicza 19, 72-420 Dziwnów
+NIP: 9860240079 Tel.:913813088
+Nabywca
+Nazwa: Gmina Dziwnów
+Adres: Szosowa 5, 72-420 Dzi nów
+NIP: 986-01-56-976
+
+Oryginał
+
+Termin płatności: 2015-05-19 Konto sprzedawcy: 53124039271111001055738687
+UPI Nazwa PKWIU Ilość XVI VAT Rabat % Cena nett-o1 Wartość Wartość VAT Wartość brutto
+netto
+1 !C.O. -5, za okres:
+42,92
+I m2
+23%
+0,00
+2,85 122,32
+28,13
+150,45
+V.2015
+1
+2
+!Opłata za gosp.
+odp. kom. segreg.,
+za okres: V.2015
+15.01.06
+1,00
+m-c
+ZW.
+0,00
+120,00
+120,00
+0,00
+120,00
+3 ścieki, za okres:
+37.00.11
+2,00
+m3
+8%
+0,00
+5,04
+10,08
+0,81
+10,89
+1V.2015
+4 świetlica Dziwna
+68.20.11
+42,92,
+m2
+ZVV.
+0,00
+1,64
+70,39
+0,00
+70,39
+4A zał.
+eksploatacyjna, za
+okres: V.2015
+5
+zimna woda ryczałt, 36.00.20
+za okres: V.2015
+2,00
+m3
+8%
+0,00
+3,79
+7,58
+0,61
+8,19
+_lenergia
+elektryczna
+94,00
+kWh
+23%
+0,00
+0,60
+56,40
+12,97
+69,37
+SUMA:
+386,77
+42,52
+429,29
+Razem do zapł. za fakturę: 429,29 PLN
+Słownie do zapłaty: czterysta dwadzieścia dziewięć zł. 29/100
+Zestawienie odczytów
+LP
+Numer licznika
+Odczyt
+poprzedni
+Odczyt aktualny
+Podliczniki
+Data odczytu
+poprzedniego
+Data odczytu
+aktualnego
+Udział %
+Zużycie
+6
+e36
+18691,00
+18785,00
+0,00
+2015-04-08
+2015-05-05
+100,00
+94,00
+W przypadku przekroczenia terminu zapłaty będą naliczane odsetki ustawowe za każdy dzień opóźnienia od wartości
+Zestawienie zaległości
+Nadpłaty
+Dokument
+Kwota
+Termin plat.
+Odsetki
+Kwota
+0,00
+SALDO należności:
+429,29
+Dziwnowie
+Biażejczy anna
+Opis: koszty utrzymania świetlicy ul. Dziwna 4A w
+aKtauttgAis,6416itattblelt---
+sprzeaodka z 0.0.
+ul. Mickiewicza 19, 72-420 Dziwok
+nabywca
+2oiłucv,:).:0
+:t 919 w
+raZDUVC.10.1509 ir-DvvkaioAbli yams
+AA0)41 N7C1-1-11:3 nEusgnd Oa
+ANYSW.AAN 7S3INYLSOZ - !SOY-MN-a 31N
+1LDATOCk06 4.11410 AUtilatA
+okpodso6 Otulam
+mutilid4isopn ai O lOZ rtuRN 6
+?ND 2 k ',Mn I Mural ANO** i
+wystawiający
+04U °
+Druk: Netproces Systemy Informatyczne Qnet
+Strona 1/3

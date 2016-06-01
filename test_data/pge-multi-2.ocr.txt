@@ -1,0 +1,122 @@
+Stawka VAT Netto VAT
+23% 46,75 10,75
+Razem punkt 46,75 10,75
+Punkt poboru energii: BUDYNEK ADMINISTRACYJNY] Numer punktu: 016
+BEJSCE, 28-512 BEJSCE
+Numer dokumentu: 06/6207/057
+Taryfa: Wygodna
+Kod PPE: PL_ZEOD 2603000362_06
+Rozliczenie od dnia: 2015.01.01-
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika: 12852358
+Moc z umovry: 12,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie:
+Ilość Jm Cena
+25 A
+VAT Należność
+4 1 C11 152458 155839
+2015.02.04 1
+3381 kWh 0,2373 23% 802,31
+Stawka VAT Netto
+VAT Brutto
+23% 802,31 184,53 986,84
+Razem punkt 802,31 184,53 986,84
+Punkt poboru energii: OŚRODEK ZDROWIA
+BEJSCE, 28-512 BEJSCE
+Numer punktu: 019
+Numer dokumentu: 06/6207/066
+Taryfa:
+Kod PPE:
+Rozliczenie od dnia:
+Wygodna
+PL_ZEOD 2603000363_08
+2015.01.01-
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika: 88342631
+Moc z umowy: 15,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie:
+Ilość Jm Cena
+32A
+VAT Należność
+5 1 C11 22773 23311
+2015.02.04 1
+538 kWh 0,2373 23% 127,67
+Stawka VAT Netto
+VAT Brutto
+23% 127.67
+29.36 157.03
+Razem punkt 127,67
+29,36 157,03
+Punkt poboru energii: KLUBOKAWIARNIA
+PROKOCICE, 28-512 PROKOCICE
+Numer punktu: 020
+Numer dokumentu: 061209,011
+Taryfa: Wygodna
+Kod PPE: PL_ZEOD_2603000364_00
+Rozliczenie od dnia: 2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznica: 29223189
+Moc z umowy: 4,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie:
+Ilość Jm Cena
+25 A
+VAT Należność
+6 1 C11 4 4
+2015.02.12 1
+0 kWh 0,2373 23% 0,00
+Stawka VAT Netto
+VAT Brutto
+23%
+0,00
+0,00
+0,00
+Razem punkt
+0,00
+0,00
+0,00
+Punkt poboru energii: ŚWIETLICA WIEJSKA
+PROKOCICE, 28-512 PROKOCICE
+Numer punktu: 021
+Numer dokumentu: 06/6209/080
+Taryfa: Wygodna
+Kod PPE: PL_ZEOD 2603000365_02
+Rozliczenie od dnia: 2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika: 14275695
+Mocz umowy: 12,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie:
+Ilość Jm Cena
+25 A
+VAT Należność
+7 1 C11 6955 6957
+2015.02.12 1
+2 kWh 0,2373 23% 0,47
+Stawka VAT Netto
+VAT Brutto
+23%
+0,47
+0,11
+0,58
+Razem punkt
+0,47
+0,11
+0,58
+Punkt poboru energii: OSP BEJSCE
+PIOTRKOWICE, 28-512 PIOTRKOWICE
+Numer punktu: 022
+Numer dokumentu: 06/6392/104
+Taryfa: Wygodna 
+FAKTURA VAT Nr: 06 0172 000 0563 06
+Nr fabryczny licznika: 2804762
+Odczyt fizyczny
+Numer strony: 2
+POE Obrót spółki Akcyjna ul. 8-go Marca 6. 35-959 Rzeszów skr. poczt. 63. Sad Rejonowy w Rzeszom° XII Wydział Gospodarczy KRS: 0000030499, NIP: 813 02 68 082. Kapital
+zakładowy: 492 640 400 złotych w całości Opłacony httpaAvenv.pge-obrot.pl

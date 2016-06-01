@@ -1,0 +1,62 @@
+Taryfa: Wygodna Nr fabryczny licznika: 14890698 Odczyt fizyczny
+Kod PPE: PL_ZEOD_2603000382_04
+Rozliczenie od dnia: 2015.01.01 Mocz umowy: 12,00 kW Zabezpieczenie: 25 A
+Lp. - S Taryfa Od stanu Do stanu Do dnia Mnożna Ilość Jm Cena VAT
+23 1 C11 1553 1559 2015.02.12 1 6 kWh 0,2373 23%
+Stawka VAT Netto VAT Brigs '
+23% 1,42 0,33 1.75
+
+Razem punkt
+1,42
+0,33
+1,79
+Punkt poboru energii: BUDYNEK GMINY
+BEJSCE, 28-512 BEJSCE
+Numer punktu: 053
+Numer dokumentu: 06/6203/082
+Taryfa: Wygodna Nr fabryczny licznika: 15187769 Odczyt fizyczny
+Kod PPE: PL ZEOD 2603100013_52
+Rozliczenie od dnia: 201-5.01.01- Mocz umowy: 12,00 kW Zabezpieczenie: 25 A
+Lp. - S Taryfa Od stanu Do stanu Do dnia Mnożna Ilość Jm Cena VAT Należność
+24 1 C11 2771 2870 2015.02.04 1 99 kWh 0,2373 23% 23,49
+Stawka VAT Netto VAT Brutto
+23% 23,49 5,40 28.89
+Razem punkt 23,49 5,40 28,89
+Punkt poboru energii: ŚWIETLICA WIEJSKA
+Numer punktu: 056
+ZBELTOWICE DZ. 284, 28•512 ZBELTOWICE Numer dokumentu: 06/8434/062
+Taryfa: Wygodna Nr fabryczny licznika: 15371184 Odczyt fizyczny
+Kod PPE: PL_ZEOD_2603100006_49
+Rozliczenie od dnia: 2015.01.01 Mocz umowy: 12,00 kW Zabezpieczenie: 20 A
+Lp. - S Taryfa Od stanu Do stanu Do dnia Mnożna Ilość Jm Cena VAT Należność
+25 1 C11 10227 13419 2015.02.26 1 3192 kWh 0.2373 23% 757,46
+Stawka VAT Netto VAT Brutto
+23% 757.46 174.22 931 68
+Razem punkt 757,46 174,22 931.68
+Punkt poboru energii: DOM NAUCZYCIELA
+Numer punktu: 057
+CZYŻOWICE, 28-512 CZYŻOWICE Numer dokumentu: 06/9162/007
+Taryfa: Komfortowa Nr fabryczny licznika: 6538484 Odczyt fizyczny
+Kod PPE: PL_ZEOD_2603000384_08
+Rozliczenie od dnia: 2015.01.01 Mocz umowy: 15,00 kW Zabezpieczenie: 32 A
+Lp. - S Taryfa Od stanu Do stanu Do dnia Mnożna Ilość Jm Cena VAT Należność
+26 1 G11 7574 7592 2015.01.21 1 18 kWh 0,2373 23% 4,27
+27 1 G11 7592 7610 2015.02.11 1 18 kWh 0,2373 23% 4,27
+Stawka VAT Netto VAT Brutto
+23% 8,54 1,96 10,50
+Razem punkt
+8,54 1,96 10,50
+Punkt poboru energii: DOM NAUCZYCIELA
+Numer punktu: 058
+BEJSCE, 28-512 BEJSCE Numer dokumentu: 06/9162/008
+Taryfa: Wygodna Nr fabryczny licznika: 9810161 Odczyt fizyczny
+Kod PPE: PL_ZEOD_2603000385_00
+Rozliczenie od dnia: 2015.01.01 Mocz umowy: 15,00 kW Zabezpieczenie:
+Lp. • S Taryfa Od stanu Do stanu Do dnia Mnożna Ilość Jm Cena VAT Należność
+28 1 C11 427 579 2015.02.04 1 152 kWh 0,2373 23% 36,07
+Stawka VAT Netto VAT Brutto
+23% 36,07 8,30 44,37
+FAKTURA VAT Nr: 06 0172 000 0563 06 Numer strony: 6
+PGE Obrót Spółka Akcyjna W. 8-go Marca 6. 35-959 Rzeszów skr. poczt. 63. Sad Repnowy w Rzeszowie XII Wydział Gospodarczy KRS: 0000030499, NIP: 813 02 68 082, KaptIal
+zaktadowy 492 640 400 ztotych w catoto opłacony http:invww.pge-obrotpl
+

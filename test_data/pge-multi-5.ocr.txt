@@ -1,0 +1,150 @@
+
+Stawka VAT Netto VAT Brutto
+23% 0,00 0,00 0,00
+Razem punkt
+Punkt poboru energii: ŚWIETLICA WIEJSKA
+MORAWIANY DZ. NR 242, 28-512 MORAWIANY
+0,00 0,00 0,00
+Numer punktu: 035
+Numer dokumentu: 06/8405/044
+Taryfa: Wygodna
+Kod PPE: PL_ZEOD_2603000376_03
+Rozliczenie od dnia: 2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika: 15121915
+Moc z umowy: 12,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie:
+Ilość Jm Cena
+20 A
+VAT
+7 -.: : :
+--..----
+-.._ 7.
+Należność
+18 1 C11
+16207 16269
+2015.02.04 1
+62 kWh 0,2373 23% 14,71 5
+Stawka VAT Netto VAT Brutto
+23%
+14,71
+3,38 18,09
+Razem punkt
+14,71
+Punkt poboru energii: OSP DOBIESLAWICE
+DOBIESŁAWICE, 28-512 BEJSCE
+Numer punktu:
+Numer dokumentu:
+Taryfa:
+Wygodna
+Nr fabryczny licznika: 11446461
+Odczyt fizyczny
+Kod PPE:
+PL ZEOD 2603000377 05
+-5.01.01-
+Rozliczenie od dnia:
+201
+Mocz umowy:
+15,00 kW
+Zabezpieczenie:
+„Lp. - S Taryfa
+Od stanu Do stanu
+Do dnia
+Mnożna Ilość
+Jm Cena
+19 1 C11
+2660 3124
+2015.02.11
+1 464
+kWh 0,2373
+Stawka VAT
+Netto
+23%
+110,11
+Razem punkt
+110,11
+3,38 18,09 f
+036
+06/6185/063
+32 A
+VAT Należność
+23% 110,11
+VAT Brutto
+135,44
+25,33
+25,33 135,44
+Punkt poboru energii: BUDYNEK MAGAZENOWY
+BROŃCZYCE, 28-512 KIJANY-BROŃCZ.
+Numer punktu: 044
+Numer dokumentu: 06/6190/035
+Taryfa: Wygodna
+Kod PPE: PL_ZEOD_2603000378_07
+Rozliczenie od dnia: 2015.01.01
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika: 9801752
+Mocz umowy: 12,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie:
+Ilość Jm Cena
+25A
+VAT Należność/
+20 1 C11
+6080
+
+2015.02.04 1
+106 kWh 0,2373 23%
+Stawka VAT Netto
+25,15
+VAT Brutto
+23% 25.15
+5.78
+30,93
+Razem punkt 25,15
+5,78 30,93
+Punkt poboru enem: BUDYNEK MIESZKALNY
+CZYZOW10E 16.28-512 CZYZOW10E
+Numer punktu: 050
+Numer dokumentu: 06/7247/039
+Taryfa: Kondortowa
+Kod PPE: PL MOO 2603000381_02
+Rozliczenie od dnia: 2015.01.0f-
+Lp. - S Taryfa Od stanu Do stanu
+Nr fabryczny licznika: 27816227
+Moc z umowy: 5,00 kW
+Do dnia Mnożna
+Odczyt fizyczny
+Zabezpieczenie: 32 A
+Ilość Jm Cena VAT Należność
+21 1 Gil
+22 1 G11
+9820
+9820
+9820
+9820
+2015.01.21
+2015.02.11
+0 kWh 0,2373 23%
+0 kWh 0,2373 23%
+Stawka VAT Netto
+0,00
+0,00
+VAT Brutto
+23%
+0,00
+0,00
+0,00
+Razem punkt
+0,00
+0,00
+0,00
+Punkt poboru energii: OBIEKT KULTURALNO OŚWIAT
+STOJANOWICE DZ. NR 1371, 28-512 BEJSCE
+Numer punktu: 052
+Numer dokumentu: 06/6185/083
+FAKTURA VAT Nr: 060/72 000 0563 06
+Numer strony: 5
+POE Obrót Sytne Akcyjne ul 8-go Marca 6.35-959 Rzeszów skr. poczt. 63. Sąd Rejonowy w Rzeszowie XII Wydział Gospodarczy KRS: 0000030499. NIP. 813 02 68 082. Kapitał
+zakładowy: 492 640 400 noire w całości mikicony Intrinnww.pge•olxotel
