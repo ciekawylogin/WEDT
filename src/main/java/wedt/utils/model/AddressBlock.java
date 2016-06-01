@@ -19,6 +19,10 @@ public class AddressBlock implements Serializable {
     }
 
     public String printValue() {
-        return tokenLines.toString();
+        String result = "";
+        for (TokenLine tokenLine: tokenLines) {
+            result += tokenLine.getValue() + " ";
+        }
+        return result+"\n";
     }
 }
