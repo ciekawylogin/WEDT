@@ -11,6 +11,9 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{lipsum}
+\usepackage[ampersand]{easylist}
+
+\newwatermark[allpages,color=gray!30,angle=45,scale=3,xpos=0,ypos=0]{SZKIC}
 
 \title{Projekt WEDT, wersja robocza}
 \author{
@@ -42,8 +45,10 @@ Zbiór testowy stanowią pliki tekstowe będące rezultatem przetworzenia zeskan
 
 W ramach projektu zbadaliśmy dwa algorytmy:
 
-- Prosty algorytm oparty na N-gramach
-- Algorytm oparty na technice losowych lasów decyzyjnych (RDF)
+\begin{easylist}[itemize]
+& Prosty algorytm oparty na N-gramach
+& Algorytm oparty na technice losowych lasów decyzyjnych (RDF)
+\end{easylist}
 
 Ponadto stworzyliśmy program o nazwie Tokenizer, służący do dzielenia faktur na tokeny i oznaczania charakterystycznych dla faktur typów tokenów. Jest on używany do wstępnego przetworzenia wejścia dla obu algorytmów.
 
@@ -54,38 +59,48 @@ Ponadto stworzyliśmy program o nazwie Tokenizer, służący do dzielenia faktur
 Pierwszym etapem przetwarzania faktury jest podział na tokeny. Tokeny powinny być, w miarę możliwości, odrębnymi jednostkami semantycznymi. 
 
 Najprostszym rozwiązaniem mógłby być użycie spacji jako separatorów. Takie podejście ma jednak wady:
-- W plikach tekstowych wygenerowanych przez OCR często brakuje spacji - szczególnie bezpośrednio przed i po znakach interpunkcyjnych, takich jak kropka, przecinek, nawias czy dwukropek. 
-- Często chcielibyśmy traktować jako jeden token coś, co zawiera w sobie spacje. Przykładami mogą być wielowyrazowe nazwy miejscowości (np. Mińsk Mazowiecki) czy też numery kont bankowych podzielone na 4-cyfrowe bloki odseparowane spacjami (np. 12 3456 7890 0000 0000 0000 0001). Nie wszystkie spacje powinny być zatem uwzględniane jako separatory.
+
+\begin{easylist}[itemize]
+& W plikach tekstowych wygenerowanych przez OCR często brakuje spacji - szczególnie bezpośrednio przed i po znakach interpunkcyjnych, takich jak kropka, przecinek, nawias czy dwukropek. 
+& Często chcielibyśmy traktować jako jeden token coś, co zawiera w sobie spacje. Przykładami mogą być wielowyrazowe nazwy miejscowości (np. Mińsk Mazowiecki) czy też numery kont bankowych podzielone na 4-cyfrowe bloki odseparowane spacjami (np. 12 3456 7890 0000 0000 0000 0001). Nie wszystkie spacje powinny być zatem uwzględniane jako separatory.
+\end{easylist}
 
 W przypadku pierwszym rozwiązaniem jest używanie jako separatorów nie tylko spacji, lecz także: dwukropków, kropek, nawiasów i przecinków. To jednak powoduje kolejny problem: podobnie jak spacje, te znaki w określonych sytuacjach nie powinny być separatorami. Na przykład, jeśli mamy dwa ciągi cyfr oddzielone kropką (123.45), to prawdopodobnie mamy do czynienia z liczbą wrac z rozwinięciem dziesiętnym. Podobnie, trzy grupy po dwie cyfry (01.01.16) prawdopodobnie stanowią datę.
 
 Powyższe obserwacje doprowadziły do następującego algorytmu:
-- Dla każdego znaku ze zbioru: {spacja, przecinek, kropka, nawias, średnik, nawias zamykający, nawias otwierający}:
--- Na podstawie otoczenia znaku stwierdź, czy wchodzi on w skład jednego z następujących tokenów:
---- Nazwa miejscowości
---- Nazwa ulicy
---- Inne zesłownikowane wartości, jak np. "S. A." czy "Sp. z o.o."
---- Numer konta
---- Data
---- Liczba dziesiętna
---- NIP
--- Jeśli nie, to podziel tekst w tym miejscu
-- Z wyniku powyższej operacji usuń puste tokeny
+\begin{easylist}[itemize]
+& Dla każdego znaku w dokumencie należącego do zbioru: {spacja, przecinek, kropka, nawias, średnik, nawias zamykający, nawias otwierający}:
+&& Na podstawie otoczenia znaku stwierdź, czy wchodzi on w skład jednego z następujących tokenów:
+&&& Nazwa miejscowości
+&&& Nazwa ulicy
+&&& Inne zesłownikowane wartości, jak np. "S. A." czy "Sp. z o.o."
+&&& Numer konta
+&&& Data
+&&& Liczba dziesiętna
+&&& NIP
+&& Jeśli nie, to podziel tekst w tym miejscu
+& Z wyniku powyższej operacji usuń puste tokeny
+\end{easylist}
 
 \subsection{Oznaczanie tokenów}
 
 Każdy z tokenów jest przepuszczany przez szereg testów, ustawionych według priorytetu, z których każdemu testowi odpowiada inny typ tokenu. Jeśli którykolwiek test się powiedzie, token zostaje przyporządkowany do odpowiedniego typu. Testy są podzielone na dwa rodzaje:
-- Słowniki
-- Intuicje
+\begin{easylist}[itemize]
+& Słowniki
+& Intuicje
+\end{easylist} 
  
 Test słownikowy polega na przejrzeniu danego słownika i sprawdzeniu, czy dany token się w nim znajduje. Do projektu użyliśmy następujących publicznie dostępnych słowników:
-- Słownik nazw ulic
-- Słownik nazw miejscowości
-- Słownik nazw jednostek samorządu terytorialnego (gminy, powiaty etc.)
-- Słownik imion
-- Słownik nazwisk
+\begin{easylist}[itemize]
+& Słownik nazw ulic
+& Słownik nazw miejscowości
+& Słownik nazw jednostek samorządu terytorialnego (gminy, powiaty etc.)
+& Słownik imion
+& Słownik nazwisk
+\end{easylist}
 
 \section{Podejście oparte na N-gramach}
+
 
 \section{Podejście oparte na losowym lesie decyzyjnym}
 
