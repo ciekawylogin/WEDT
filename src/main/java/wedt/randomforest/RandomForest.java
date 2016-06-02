@@ -30,7 +30,7 @@ public class RandomForest {
      * O ile tokenów będzie zadawane pytanie w węźle.
      * Jest to procentowa liczba pól (głębokość) o jakie teraz pytamy.
      */
-    private final double numberOfTokensInQuestion = 0.7;
+    private final double numberOfTokensInQuestion = 0.4;
     /**
      * Ile pojedynczych drzew decyzyjnych należy wygenerować.
      * Jest to procentowa liczba wszstkich załadowanych adresów.
@@ -43,7 +43,7 @@ public class RandomForest {
 
         randomForest.learnFromDirectory("./test_data", "decisionTrees_serial");
         List<TreeNode> decisionTrees = randomForest.learnFromSerializeFile("decisionTrees_serial");
-        randomForest.getAddressesForFile("./test_data/agora.tokens.txt", decisionTrees);
+        randomForest.getAddressesForFile("./no_address/zambrow.ocr.txt", decisionTrees);
     }
 
     public List<TreeNode> learnFromSerializeFile(String fileToBeSaved) {
@@ -107,7 +107,7 @@ public class RandomForest {
         List<TokenType> result = new ArrayList<>();
 
         for (TokenType tokenType : tokenTypes) {
-            if (random.nextDouble() < tokensForSingleTree) {
+            if (random.nextDouble() < tokensForSingleTree && tokenType != TokenType.UNKNOWN) {
                 result.add(tokenType);
             }
         }
@@ -137,7 +137,7 @@ public class RandomForest {
             int tokenLinesDepthQuestion = random.nextInt(maxLength - depthIndex);
             //o jakie tokeny bedzie zadawane pytanie (alternatywa tokenów)
             Set<TokenType> tokenTypeQuestionSet = new HashSet<>();
-            int tokensAmountInQuestion = 1 + (int) (tokenLinesDepthQuestion * numberOfTokensInQuestion);
+            int tokensAmountInQuestion = 3 + (int) (tokenLinesDepthQuestion * numberOfTokensInQuestion);
             for (int i = 0; i < tokensAmountInQuestion; i++) {
                 tokenTypeQuestionSet.add(tokenTypes.get(random.nextInt(tokenTypes.size())));
             }
@@ -175,7 +175,7 @@ public class RandomForest {
      */
     private boolean checkIfTokensContainsAnyToken(List<TokenLine> tokenLines, int depthIndex,
                                                   int tokenLinesDepthQuestion, Set<TokenType> tokenTypeQuestionSet) {
-        for (int i = depthIndex; i <= tokenLinesDepthQuestion && i < tokenLines.size(); i++) {
+        for (int i = depthIndex, j=0; j <= tokenLinesDepthQuestion && i < tokenLines.size(); i++, j++) {
             TokenLine tokenLine = tokenLines.get(i);
             if (tokenTypeQuestionSet.contains(tokenLine.getTokenType())) {
                 return true;
@@ -190,17 +190,22 @@ public class RandomForest {
      * @return długość odnalezionego ciągu adresowego, lub 0 gdy nie znaleziono
      */
     public int checkIfAddressBegins(List<TokenLine> tokenLines, int depthIndex,
-                                    TreeNode decisionTree) {
+                                    TreeNode decisionTree, int positiveAnswers,
+                                    int negativeAnswers, int maxPositiveAnswerIndex) {
         if (decisionTree.isLeafTrue()) {
-            return depthIndex;
+            if(positiveAnswers*2.35 > negativeAnswers) {
+                return maxPositiveAnswerIndex;
+            } else {
+                return 0;
+            }
         } else if (decisionTree.isLeafFalse()) {
             return 0;
         } else {
             if (checkIfTokensContainsAnyToken(tokenLines, depthIndex,
                     decisionTree.getDepth(), decisionTree.getTokenTypeSplitValue())) {
-                return checkIfAddressBegins(tokenLines, depthIndex + 1, decisionTree.getLeftChild());
+                return checkIfAddressBegins(tokenLines, depthIndex + 1, decisionTree.getLeftChild(), positiveAnswers +1, negativeAnswers, Math.max(positiveAnswers+negativeAnswers+1, maxPositiveAnswerIndex));
             } else {
-                return checkIfAddressBegins(tokenLines, depthIndex + 1, decisionTree.getRightChild());
+                return checkIfAddressBegins(tokenLines, depthIndex + 1, decisionTree.getRightChild(), positiveAnswers, negativeAnswers+1, maxPositiveAnswerIndex);
             }
         }
     }
@@ -215,15 +220,15 @@ public class RandomForest {
         int addressDepth = 0;
 
         for (TreeNode decisionTree : decisionTrees) {
-            int addressFound = checkIfAddressBegins(tokenLines, depthIndex, decisionTree);
-            if (checkIfAddressBegins(tokenLines, depthIndex, decisionTree) > 0) {
+            int addressFound = checkIfAddressBegins(tokenLines, depthIndex, decisionTree, 0,0,0);
+            if (addressFound > 0) {
                 trueAnswer++;
                 addressDepth += addressFound;
             } else {
                 falseAnswer++;
             }
         }
-        return (trueAnswer > falseAnswer) ? (int) Math.floor(addressDepth / trueAnswer) : 0;
+        return (trueAnswer*1.1 > falseAnswer) ? (int) Math.floor(addressDepth / trueAnswer) : 0;
     }
 
     public List<AddressBlock> getAddressesFromTokenLines(List<TokenLine> tokenLines, List<TreeNode> decisionTrees) {
@@ -233,7 +238,7 @@ public class RandomForest {
             int addressDepth = checkIfAddressBegins(tokenLines, i, decisionTrees);
             if (addressDepth > 0) {
                 int endIndex = Math.min(i + addressDepth, tokenLines.size());
-                addressBlocks.add(new AddressBlock(tokenLines.subList(i, endIndex)));
+                addressBlocks.add(new AddressBlock(tokenLines.subList(i, endIndex), i));
             }
         }
         return addressBlocks;
@@ -247,6 +252,8 @@ public class RandomForest {
             addressBlocks = getAddressesFromTokenLines(fileContent.get().getTokenLines(), decisionTrees);
             log.info("Number of address blocks found for file " + fileName
                     + " is " + addressBlocks.size());
+//            addressBlocks = filterSimilarAddresses(addressBlocks);
+//            log.info("After filtering " + addressBlocks.size());
             StringBuilder stringBuilder = new StringBuilder();
             for (AddressBlock addressBlock : addressBlocks) {
                 stringBuilder.append(addressBlock.printValue()).append("\n\n");
@@ -256,5 +263,27 @@ public class RandomForest {
             log.warn("Unable to read file content from " + fileName);
         }
         return addressBlocks;
+    }
+
+    private List<AddressBlock> filterSimilarAddresses(List<AddressBlock> addressBlocks) {
+        List<AddressBlock> result = new LinkedList<>();
+        boolean containsBetter;
+
+        for (AddressBlock addressBlock : addressBlocks) {
+            containsBetter = false;
+            for (AddressBlock addressBlockResult : result) {
+                if(Math.abs(addressBlockResult.getStartLine() - addressBlock.getStartLine()) < addressBlockResult.getTokenLines().size()*0.9) {
+                    if(addressBlock.getStartLine() > addressBlockResult.getStartLine()) {
+                        containsBetter = true;
+                    } else {
+                        result.remove(addressBlockResult);
+                    }
+                }
+            }
+            if(!containsBetter) {
+                result.add(addressBlock);
+            }
+        }
+        return  result;
     }
 }

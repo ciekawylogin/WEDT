@@ -10,16 +10,17 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 public class AddressBlock implements Serializable {
-    @Getter
     private List<TokenLine> tokenLines = new LinkedList<>();
+    private int startLine = -1;
 
     public void addTokenLine(TokenLine tokenLine) {
         tokenLines.add(tokenLine);
     }
 
     public String printValue() {
-        String result = "";
+        String result = "Start Line: " + startLine + "\n";
         for (TokenLine tokenLine: tokenLines) {
             result += tokenLine.getValue() + " ";
         }
