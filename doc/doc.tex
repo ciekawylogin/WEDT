@@ -103,5 +103,26 @@ Test słownikowy polega na przejrzeniu danego słownika i sprawdzeniu, czy dany 
 
 
 \section{Podejście oparte na losowym lesie decyzyjnym}
+Algorytm jest dwuetapowy.
+Najpierw następuje etap uczenia algorytmu. Polega on na zbudowaniu wielu drzew decyzyjnych na podstawie danych treningowych. Poniżej znajdują się kolejne kroki wykonywane w tym procesie.
+-	Załadowanie treningowych bloków adresowych do pamięci. Oznaczmy tę liczbę przez X.
+-	Podjęcie decyzji ile drzew decyzyjnych zostanie wygenerowanych. Jest to liczbą stanowiąca 70\% liczby wszystkich załadowanych bloków adresowych (czyli 0,7*X).
+-	Następnie w pętli generowane są kolejne drzewa decyzyjne. Dalsze kroki opisują proces generowania pojedynczego drzewa decyzyjnego.
+-	Losowane są adresy jakie będą używane podczas tworzenia danego drzewa.  Losowanych jest X dresów ze zwracaniem.
+-	Losowany jest zbiór istotnych tokenów. Jest to 80\% wszystkich tokenów występujących pośród załadowanych bloków adresowych.
+-	Teraz następuje iteracyjne tworzenie węzłów drzewa na podstawie danych wylosowanych w punktach 4 i 5. W każdym węźle wykonywane są następujące kroki:
+--	Losowana jest pewna liczba z przedziału <1, max długość bloku adresowego w węźle>. Oznaczamy ją przez Z,
+--	Losowany jest zbiór tokenów, którego liczność należy do przedziału <3, 3+40\%*liczba z punktu wyżej). Oznaczamy go przez Y,
+--	A następnie stawiane jest pytanie: „Czy adresy znajdujące się w tym węźle zawierają w kolejnych Z tokenach co najmniej jeden token ze zbioru Y?”.
+--	Wszystkie adresy z pozytywną odpowiedzią trafiają do lewego poddrzewa, a z negatywną do prawego.
+--	Następne następuje rekurencyjne wywołanie metody dla obu węzłów. Każde kolejne rekurencyjne zagłębienie pomija kolejny jeden token z załadowanych  bloków adresowych (po to aby nie odpytywać jedyne o początek adresu, ale także o jego dalszą cześć).
+--	Rekurencyjne wywołania kończą się czy lista adresów w danych węźle jest pusta lub gdy algorytm dojdzie do końca najdłuższego bloku adresowego.
+-	W tym momencie utworzone zostało drzewo decyzyjne i proces tworzenia podobnych drzew się powtarza.
+
+Etap działania algorytmu polega na porównaniu załadowanych kolejnych tokenów z wyuczonymi drzewami. Poniżej kroki tego procesu:
+-	Załadowanie tokenów z pliku.
+-	Iteracja po kolejnych tokenach. Na każdej pozycji stawiane jest pytanie/hipoteza „czy w tym miejscu rozpoczyna się blok adresowy?”. Proces uzyskania odpowiedzi na to pytanie opisują kolejne punkty.
+-	Następuje porównanie z każdym drzewem decyzyjnym rozpoczynając od ich korzeni. W każdym węźle  algorytm odpowiada sobie na zapisane w nim pytanie „Czy w kolejnych Z tokenach znajduje się chociaż jeden token ze zbioru Y?”. Jeśli odpowiedź jest twierdząca to algorytm wchodzi do lewego poddrzewa, jeśli przecząca to do prawego. Po dojściu do liścia, algorytm sprawdza czy w tym wyuczonym liściu znajdują się jakieś adresy. Jeśli tak, to drzewo spodziewa się, że w tym miejscu faktycznie może zaczynać się adres. Następuje dodatkowe sprawdzenie czy podczas przechodzenia drzewa liczba twierdzących odpowiedzi stanowi nie mniej niż ok. 40\% odpowiedzi negatywnych. Dzięki temu pomijane są potencjalne pozycje uzyskane z  mylnych drzew.
+-	Jeśli większość drzew dała pozytywną odpowiedź, na zadane pytanie „czy w tym miejscu rozpoczyna się blok adresowy?”, to dana pozycja jest dodawana do rezultatu.
 
 \end{document}
