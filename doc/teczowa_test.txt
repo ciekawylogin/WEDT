@@ -1,0 +1,74 @@
+Markov:
+Guess probability: 0.24000000000000002, lines: (12-20)
+ ul  Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147
+Guess probability: 0.07058823529411766, lines: (12-22)
+ ul  Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147  REGON  101654806
+Guess probability: 0.07058823529411765, lines: (13-20)
+ Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147
+Guess probability: 0.05080213903743314, lines: (13-22)
+ Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147  REGON  101654806
+Guess probability: 0.03294117647058823, lines: (12-24)
+ ul  Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147  REGON  101654806  Tel  443070302
+Guess probability: 0.02745098039215686, lines: (13-24)
+ Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147  REGON  101654806  Tel  443070302
+Guess probability: 0.009642857142857142, lines: (3-17)
+ Pedagogicma  TĘCZOWA  Sprzedawca  Niepubliczna  Poradnia  Psychologiczno-Pedagogiczna  TĘCZOWA  Michał  Wojakowski  ul  Polna  13/13A  97-300  Piotrków
+ TĘCZOWA  Michał  Wojakowski  ul  Polna  13/13A  97-300  Piotrków  Trybunalski  NIP
+Guess probability: 0.02382352941176471, lines: (12-17)
+ ul  Polna  13/13A  97-300  Piotrków
+
+ Guess probability: 1.0, lines: (48-56)
+ Gmina  Łęki Szlacheckie  Łęki Szlacheckie  130  97-352  Łęki Szlacheckie  NIP  7711154273
+Guess probability: 0.16289592760180996, lines: (48-54)
+ Gmina  Łęki Szlacheckie  Łęki Szlacheckie  130  97-352  Łęki Szlacheckie
+Guess probability: 0.010141987829614604, lines: (50-56)
+ Łęki Szlacheckie  130  97-352  Łęki Szlacheckie  NIP  7711154273
+
+Guess probability: 0.05647058823529411, lines: (167-174)
+ Wojakowski  97-300  Piotrków  Trybunalski  ul  Polna  13/13A
+
+Random forest:
+Start Line: 10
+ Michał  Wojakowski  ul  Polna  13/13A  97-300  Piotrków  Trybunalski  NIP
+Start Line: 11
+ Wojakowski  ul  Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147
+Start Line: 12
+ ul  Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147
+Start Line: 13
+ Polna  13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147
+Start Line: 14
+ 13/13A  97-300  Piotrków  Trybunalski  NIP  7712391147  REGON
+Start Line: 15
+ 97-300  Piotrków  Trybunalski  NIP  7712391147  REGON
+Start Line: 16
+ Piotrków  Trybunalski  NIP  7712391147  REGON  101654806
+Start Line: 17
+ Trybunalski  NIP  7712391147  REGON  101654806
+
+Start Line: 46
+ Oryginał  Nabywca  Gmina  Łęki Szlacheckie  Łęki Szlacheckie  130  97-352  Łęki Szlacheckie
+Start Line: 47
+ Nabywca  Gmina  Łęki Szlacheckie  Łęki Szlacheckie  130  97-352  Łęki Szlacheckie  NIP
+
+Start Line: 162
+ Niepubliczna  Poradnia  Psychologiczno-Pedagogiczna  TĘCZOWA  Michał  Wojakowski  97-300
+Start Line: 163
+ Poradnia  Psychologiczno-Pedagogiczna  TĘCZOWA  Michał  Wojakowski  97-300  Piotrków
+Start Line: 164
+ Psychologiczno-Pedagogiczna  TĘCZOWA  Michał  Wojakowski  97-300  Piotrków  Trybunalski
+Start Line: 165
+ TĘCZOWA  Michał  Wojakowski  97-300  Piotrków  Trybunalski
+Start Line: 166
+ Michał  Wojakowski  97-300  Piotrków  Trybunalski
+
+Oba algorytmy wyktryły wszystkie 3 adresy. Jednocześnie oba algorytmy mają pewne problemy z wyodrębnieniem dokładnie początku i końca bloku adresowego. Problem ten można rozwiązać stosując dodatkowe filtrowanie. Filtrowanie to mogłoby szukać podobnych adresów w tym samym rejonie pliku i pozostawiać pewną część wspólną (iloczyn), bądź sumę odnalezionych bloków.
+W klasie RandomForest znajduje się przykładowa prosta implementacja takiego filtrowania, która polega na pozostawienu jedynie jednego bloku adresowego z jego najbliższego otoczenia. Pozostawiany jest blok adresowy, który zaczyna się w danym rejonie pliku najwcześniej. Podczas testów zaobserwowaliśmy bowiem, że taki adres jest zazwyczaj lepszy niż te zaczynające się kilak tokenów dalej.
+Rezultat wraz z zastosowanym filtrowaniem:
+Start Line: 9
+ TĘCZOWA  Michał  Wojakowski  ul  Polna  13/13A  97-300  Piotrków  Trybunalski  NIP
+Start Line: 46
+ Oryginał  Nabywca  Gmina  Łęki Szlacheckie  Łęki Szlacheckie  130  97-352  Łęki Szlacheckie
+Start Line: 162
+ Niepubliczna  Poradnia  Psychologiczno-Pedagogiczna  TĘCZOWA  Michał  Wojakowski  97-300
+
+ Jest to wynik bardzo dobry i zadowalający. Zawiera potrzebne informacje, jednocześnie nie ma zbyt wielu niepotrzebnych tokenów.
