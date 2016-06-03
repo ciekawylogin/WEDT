@@ -1,0 +1,79 @@
+Markov:
+Guess probability: 1.0, lines: (35-47)
+ Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1  Nr  ident  NIP  7230003276
+Guess probability: 0.3583138173302108, lines: (35-43)
+ Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1
+Guess probability: 0.2683229813664596, lines: (35-42)
+ Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona
+Guess probability: 0.24285714285714285, lines: (33-47)
+ PHU  DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1  Nr  ident  NIP  7230003276
+Guess probability: 0.12646370023419204, lines: (40-47)
+ ul  Wilsona  1  Nr  ident  NIP  7230003276
+Guess probability: 0.11551972617546388, lines: (34-43)
+ DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1
+Guess probability: 0.10965121834687053, lines: (34-42)
+ DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona
+Guess probability: 0.08496894409937888, lines: (33-42)
+ PHU  DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona
+Guess probability: 0.061813186813186816, lines: (34-47)
+ DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1  Nr  ident  NIP  7230003276
+Guess probability: 0.046370023419203744, lines: (33-43)
+ PHU  DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1
+
+Guess probability: 0.31224489795918375, lines: (24-32)
+ Zambrów  ul  Fabryczna  3  nr  ident  NIP  7231622231
+Guess probability: 0.12244897959183673, lines: (25-32)
+ ul  Fabryczna  3  nr  ident  NIP  7231622231
+Guess probability: 0.07696177062374247, lines: (18-32)
+ kopia  SPRZEDAWCA  Miasto  Zambrów  Adres  18-300  Zambrów  ul  Fabryczna  3  nr  ident  NIP  7231622231
+
+Random forest:
+Start Line: 0
+  URZĄD  MIASTA  ZAMBRÓW  18-300  Zambrów  ul  Fabryczna  3
+Start Line: 1
+ MIASTA  ZAMBRÓW  18-300  Zambrów  ul  Fabryczna  3
+Start Line: 2
+ ZAMBRÓW  18-300  Zambrów  ul  Fabryczna  3  Zambrów
+Start Line: 3
+ 18-300  Zambrów  ul  Fabryczna  3  Zambrów
+Start Line: 4
+ Zambrów  ul  Fabryczna  3  Zambrów  20160317
+Start Line: 5
+ ul  Fabryczna  3  Zambrów  20160317
+
+Start Line: 17
+ oryginał  kopia  SPRZEDAWCA  Miasto  Zambrów  Adres  18-300  Zambrów  ul  Fabryczna
+Start Line: 18
+ kopia  SPRZEDAWCA  Miasto  Zambrów  Adres  18-300  Zambrów  ul  Fabryczna
+Start Line: 19
+ SPRZEDAWCA  Miasto  Zambrów  Adres  18-300  Zambrów  ul  Fabryczna
+Start Line: 20
+ Miasto  Zambrów  Adres  18-300  Zambrów  ul  Fabryczna
+Start Line: 21
+ Zambrów  Adres  18-300  Zambrów  ul  Fabryczna  3  nr
+Start Line: 22
+ Adres  18-300  Zambrów  ul  Fabryczna  3  nr
+Start Line: 23
+ 18-300  Zambrów  ul  Fabryczna  3  nr  ident
+
+Start Line: 32
+ NABYWCA  PHU  DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona
+Start Line: 33
+ PHU  DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1
+Start Line: 34
+ DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1
+Start Line: 35
+ Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona  1
+Start Line: 36
+ Skawski  Adres  18-300  Zambrów  ul  Wilsona  1  Nr
+
+W tym pliku nieco lepiej poradził sobie algorytm drzew losowych. Wykrył on o jeden adres więcej. Algorytmy podobnie jak w poprzednim pliku nie były w stanie wyodrębnić dokładnie początku i końca adresów.
+Po zastosowaniu filtrowania usuwającego podobne adresy algorytm drzew losowych dał następujący rezultat:
+Start Line: 0
+ URZĄD  MIASTA  ZAMBRÓW  18-300  Zambrów  ul  Fabryczna  3
+Start Line: 17
+ oryginał  kopia  SPRZEDAWCA  Miasto  Zambrów  Adres  18-300  Zambrów  ul  Fabryczna
+Start Line: 32
+ NABYWCA  PHU  DIPOL  Grzegorz  Skawski  Adres  18-300  Zambrów  ul  Wilsona
+
+ Co jest również wynikiem bardzo dobrym i jak najbardziej zadowalającym.
